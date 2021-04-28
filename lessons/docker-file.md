@@ -77,7 +77,15 @@ docker build -t my-first-node-app .
 
 ## Share Image
 
-1. Push my-first-node-app เข้าไปใน docker hub
+1. ให้ Build image ด้วยชื่อ docker hub ของตัวเองที่สมัคร `<docker_hub_username>/my-first-node-app`
+
+ถ้าใครยังไม่มีไปสมัครที่ [docker hub](https://hub.docker.com/signup)
+
+จากนั้นให้ login ด้วย `docker login` แล้วใส่ username password ลงไป
+
+ต่อไปให้เรา build image `docker build -t <docker_hub_username>/my-first-node-app .`
+
+2. Push my-first-node-app เข้าไปใน docker hub
 
 ```
 docker push <docker_hub_username>/my-first-node-app
@@ -85,7 +93,7 @@ docker push <docker_hub_username>/my-first-node-app
 
 เมื่อเรา Push Image ขึ้นไปบน Docker Hub แล้ว เราสามารถที่จะ Pull ลงมา Run Container บนเครื่องเราได้เลย เราก็จะได้ Node App ที่เราเขียนไว้ขึ้นมา
 
-2. ให้ทุกคนลอง Pull image `napatwongchr/my-first-node-app`
+3. ให้ทุกคนลอง Pull image `napatwongchr/my-first-node-app`
 
 `docker pull napatwongchr/my-first-node-app`
 
