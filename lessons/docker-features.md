@@ -13,7 +13,7 @@ Docker bind mount คือ ฟีเจอร์ที่ทำให้เร�
 
 🌟 มีประโยชน์ในการสร้าง Environment Dev โดยทีเราไม่ต้อง Setup Environment ในการพัฒนา Software ใหม่ขึ้นมาเองตั้งแต่ต้น
 
-`docker run -dit -p 3001:3001 --mount type=bind,src="$(pwd)",target=/app --rm --name my-node-app my-node-app`
+`docker run -dit -p 3001:3001 --mount type=bind,src="$(pwd)",target=/app --rm --name my-first-node-app my-first-node-app`
 
 <br><hr><br>
 
@@ -21,7 +21,7 @@ Docker bind mount คือ ฟีเจอร์ที่ทำให้เร�
 
 Docker volume mount คือ ฟีเจอร์ที่ทำให้เราสามารถที่จะเก็บข้อมูลไว้ ระหว่างการ Run container ได้ **เนื่องจาก Container ที่รันขึ้นมาจะไม่สามารถที่จะเก็บข้อมูลหรืออะไรไว้ได้เลยเวลาถูกปิดลงไป**
 
-🌟 มีประโยชน์ในการเก็บข้อมูล Database เช่น Container ของ MongoDB
+🌟 มีประโยชน์ในการเก็บข้อมูล Database เช่น Container ของ MySQL
 
 `docker run -dit -p 3306:3306 -e MYSQL_ROOT_PASSWORD="123456789" --mount type=volume,src=mysql_data,target=/var/lib/mysql --rm --name mysql_db mysql`
 
@@ -35,7 +35,7 @@ Docker compose คือ ฟีเจอร์ที่ทำให้เรา�
 version: "3"
 services:
   node_app:
-    container_name: "my_node_app"
+    container_name: "my-first-node-app"
     build: ./backend
     ports:
       - "3001:3001"
@@ -61,3 +61,7 @@ services:
 volumes:
   mysql_data:
 ```
+
+<br><hr><br>
+
+[Table of content](https://github.com/napatwongchr/intro-to-container)
