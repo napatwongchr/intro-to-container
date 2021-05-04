@@ -15,6 +15,8 @@ Docker bind mount คือ ฟีเจอร์ที่ทำให้เร�
 
 `docker run -dit -p 3001:3001 --mount type=bind,src="$(pwd)",target=/app --rm --name my-first-node-app my-first-node-app`
 
+![Docker bind mount](./images/bind-mount.png)
+
 <br><hr><br>
 
 ## Docker Volume Mount
@@ -24,6 +26,8 @@ Docker volume mount คือ ฟีเจอร์ที่ทำให้เ�
 🌟 มีประโยชน์ในการเก็บข้อมูล Database เช่น Container ของ MySQL
 
 `docker run -dit -p 3306:3306 -e MYSQL_ROOT_PASSWORD="123456789" --mount type=volume,src=mysql_data,target=/var/lib/mysql --rm --name mysql_db mysql`
+
+![Docker volume mount](./images/volume-mount.png)
 
 <br><hr><br>
 
@@ -61,6 +65,8 @@ services:
 volumes:
   mysql_data:
 ```
+
+![Docker compose](./images/docker-compose.png)
 
 <br><hr><br>
 
