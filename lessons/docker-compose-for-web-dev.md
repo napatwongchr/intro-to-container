@@ -64,7 +64,13 @@ volumes:
   mysql_data:
 ```
 
-5. ทำการ run `docker-compose up` เราจะมี Containers ขึ้นมาทั้งหมด 4 ตัว web, node server, mongodb, mysql
-6. <br><hr><br>
+5. ทำการ run `docker-compose up` เราจะมี Containers ขึ้นมาทั้งหมด 4 ตัว web, node server,
+   mongodb, mysql
+
+<br><hr><br>
+
+## Development workflow for docker application
+
+![Development workflow for docker app](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/docker-application-development-process/media/docker-app-development-workflow/life-cycle-containerized-apps-docker-cli.png)
 
 [Table of content](https://github.com/napatwongchr/intro-to-container)
